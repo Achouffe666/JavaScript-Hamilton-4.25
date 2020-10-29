@@ -20,5 +20,27 @@
     ];
 
     // your code here
+    let button = document.querySelector('#next');
+    let parent = document.querySelector('.material');
+    let image = parent.getElementsByTagName('img')[0];
+    let index = 0;
+
+    
+
+        button.addEventListener('click', () => {
+
+            
+                index++;
+                image.src = gallery[index];
+
+                if (index > gallery.length - 2) {
+                    index  = -1;
+            } else {
+            }  
+        })
+        
+    
+   
+    
 
 })();

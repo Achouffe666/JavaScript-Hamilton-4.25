@@ -15,4 +15,18 @@
 
     // your code here
 
+    let target = document.getElementById('target');
+    let today = new Date();
+    let actualHour = parseInt(today.getHours());
+
+    if (actualHour < 18) {
+
+        target.innerHTML = "Hello!";
+        
+    } else {
+        target.innerHTML = "Good Evening!";
+    }
+
+
+
 })();

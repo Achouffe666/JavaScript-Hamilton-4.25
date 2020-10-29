@@ -12,5 +12,34 @@
 (function() {
 
     // your code here
+    let target = document.querySelector('#target');
+    let targetValue = target.innerHTML;
+    let size = [25, 15, 10, 20, 30];
+    let targetSplit = targetValue.split('');
+    let i = 0;
+    let letterOne = document.createElement('p');
+    let tab = [];
+
+
+    targetSplit.forEach(letter => {
+
+        tab.push(letter);
+
+        let content = document.createTextNode(tab.join(''));
+        letterOne.appendChild(content);
+        target.appendChild(letterOne);
+
+        let changingFontSize = size[i]+"px";     
+        if (i < size.length-1) {
+            i++;
+            
+        } else {
+            i = 0;
+        }
+       
+        letterOne.style.fontSize = changingFontSize;
+
+        
+    });
 
 })();

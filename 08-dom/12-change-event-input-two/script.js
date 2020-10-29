@@ -12,5 +12,23 @@
 (function() {
 
     // your code here
+    let input = document.querySelector('#pass-one');
+    
+    input.addEventListener('keyup',()=>{
+
+        let character = input.value.length;
+
+        let passNumbers = input.value.replace(/[^0-9]/g,"").length; //regEx
+
+        if (character>7 && passNumbers > 1) {
+
+        document.querySelector('#validity').innerHTML ="Ok";
+            
+        } else {
+            
+        }
+
+  
+    })
 
 })();

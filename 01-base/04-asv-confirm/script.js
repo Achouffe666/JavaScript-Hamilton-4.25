@@ -12,5 +12,16 @@
 (function() {
 
     // your code here
+    let age = prompt("How old are you?");
+    let gender = prompt ("What is you gender?");
+    let town = prompt ("Where do you live?");
+
+    let confirmation = confirm("You are " + age + " years old, you are a " + gender + ", and you live in " + town);
+
+    if (confirmation == false) {
+        location.reload();
+    } else {
+        
+    }
 
 })();

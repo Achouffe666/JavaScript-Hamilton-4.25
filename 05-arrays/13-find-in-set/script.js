@@ -23,4 +23,17 @@
     ]);
 
     // your code here
+    let start = document.getElementById('run');
+
+    start.addEventListener('click', () => {
+
+        console.log(people.size);
+
+        if (people.has('Alexandre') == true) {
+            console.log('Yes Alexander is in');
+        } else {
+            console.log('No, Alexander is not in');
+        }
+
+    })
 })();

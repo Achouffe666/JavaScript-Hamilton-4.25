@@ -28,4 +28,8 @@
 
     // your code here
 
+    let button = document.getElementById('run');
+
+    button.addEventListener('click',  () => {alert(fruits.slice(0,4))} );
+
 })();

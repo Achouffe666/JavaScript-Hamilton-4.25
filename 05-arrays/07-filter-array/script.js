@@ -90,5 +90,21 @@
     ];
 
     // your code here
+    let button = document.getElementById('run');
+    let majorPeople = [];
+
+    let peopleAge = people.forEach(ages => {
+       
+        if (ages.age>18) {
+            majorPeople.push(ages.firstname)
+            
+        } else {
+            
+        }
+    })
+
+    button.addEventListener('click', () => {
+        alert(majorPeople);
+    })
 
 })();

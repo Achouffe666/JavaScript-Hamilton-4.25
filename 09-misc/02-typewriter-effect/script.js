@@ -12,5 +12,29 @@
 (function() {
 
     // your code here
+    let target = document.querySelector('#target');
+    let targetSplit = target.innerHTML.split('');
+    let letters = [];
+    let index = 0;
+
+    targetSplit.forEach(letter => {
+        letters.push(letter);
+    });
+
+    target.innerHTML = "";
+
+        for (let i = 0; i < letters.length; i++) {
+            let random = Math.random() * (500 - 100) + 100;
+
+                setTimeout(()=>{
+                    target.innerHTML = target.innerHTML + letters[index];
+                    index++;
+                },i*random);
+          
+            
+        }
+       
+
+
 
 })();

@@ -12,5 +12,7 @@
 (function() {
 
     // your code here
+    let target = document.querySelectorAll('.target');
 
+    target.forEach(allTarget => allTarget.innerHTML = "Owned!")
 })();

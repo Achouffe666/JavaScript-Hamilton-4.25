@@ -27,4 +27,34 @@
         user: null,
     };
     // your code here
+        let start = document.getElementById('run');
+
+        start.addEventListener('click' , () => {
+        computers.forEach(element => {
+
+            if (element.hasOwnProperty('available') == false) {
+
+                Object.defineProperty(element, 'available', {value:true,});
+                
+            } if(element.hasOwnProperty('user') == false) {
+
+                Object.defineProperty(element, 'user', {value:null,});
+            }
+            
+             if(element.hasOwnProperty('os') == false){
+
+                Object.defineProperty(element, 'os', {value:"Linux",});
+
+            }
+            else{};
+
+            console.log(element);
+
+            
+            
+        });
+
+
+    })
+    
 })();

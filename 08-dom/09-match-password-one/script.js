@@ -10,6 +10,24 @@
 // You will have time to focus on it later.
 
 (function() {
+    let start = document.querySelector('#run');
+    let pass1 = document.querySelector('#pass-one');
+    let pass2 = document.querySelector('#pass-two');
+
+
+    let pass1Value  = document.querySelector('#pass-one').value;
+    let pass2Value = document.querySelector('#pass-two').value;
+
+start.addEventListener('click', () => {
+
+    if (pass1Value === pass2Value) {
+        
+    } else {
+        pass2.style.borderColor ="red";
+        pass1.style.borderColor ="red";
+    }
+
+});
 
     // your code here
 

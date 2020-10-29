@@ -12,9 +12,16 @@
 (function() {
 
     document.getElementById("run").addEventListener("click", function() {
+        
+        let number = "";
+        for (let i = 1; i < 22; i++) {
+
+            number += i*i + ", ";
+        }
+
+        alert(number);
 
         // your code here
-
     });
 
 })();

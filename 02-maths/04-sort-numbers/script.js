@@ -16,6 +16,10 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
+        let numbers = [2, 4, 14, 10, 90, 23, 16];
+        let sortedNumber = numbers.sort((a,b) =>a-b);
+
+        alert (sortedNumber);
 
     });
 

@@ -12,5 +12,23 @@
 (function() {
 
     // your code here
+    let start = document.querySelector('#run');
+
+    let passOneValue = document.querySelector('#pass-one').value;
+    let passTwoValue = document.querySelector('#pass-two').value;
+
+    let PassOne = document.querySelector('#pass-one');
+    let PassTwo = document.querySelector('#pass-two');
+
+start.addEventListener('click', () => {
+
+    if (passOneValue === passTwoValue) {
+        
+    } else {
+        PassOne.classList.add ("error");
+        PassTwo.classList.add ("error");
+        
+    }
+})
 
 })();

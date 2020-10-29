@@ -89,6 +89,18 @@
         },
     ];
 
+    let start = document.getElementById('run');
+    let allAges = [];
+
+    start.addEventListener('click', () => {
+     
+       people.forEach(ages => {
+        allAges.push(ages.age);
+       });
+
+       console.log(allAges.reduce((a, b)=> a+b));        
+    })
+
     // your code here
 
 })();

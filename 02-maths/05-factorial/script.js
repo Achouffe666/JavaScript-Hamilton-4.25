@@ -16,7 +16,15 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
-
+       
+       let number = parseInt(document.getElementById('number').value); 
+       
+         if (number === 0 || number === 1)
+        alert ("1");
+        for (var i = number - 1; i >= 1; i--) {
+        number *= i;
+  }
+        alert (number);
     });
 
 })();

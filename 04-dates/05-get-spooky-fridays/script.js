@@ -12,5 +12,29 @@
 (function() {
 
     // your code here
+    let choosedYear = document.getElementById('year').value;
+    let run = document.getElementById('run');
+    let date = new Date (choosedYear);
+    let month = date.setMonth(0);
+    let dayThirteen = date.setDate(13);
+    let weekDay = date.getDay();
+
+
+
+  
+
+
+    run.addEventListener('click', () => {
+        for (let i = month; i < 12; i++) {
+
+            console.log("yeah");
+            
+        }
+    })
+
+ 
+
+
+
 
 })();

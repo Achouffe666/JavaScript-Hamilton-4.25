@@ -10,7 +10,19 @@
 // You will have time to focus on it later.
 
 (function() {
+      // your code here
+    const red = document.getElementById('red');
+    const green = document.getElementById('green');
+    const yellow = document.getElementById('yellow');
+    const blue = document.getElementById('blue');
 
-    // your code here
+  // red.addEventListener('click', redColor(), false);
+
+  red.addEventListener("mouseup", () => { red.style.backgroundColor = "red"; }); 
+  green.addEventListener("mouseup", () => { green.style.backgroundColor = "green"; }); 
+  yellow.addEventListener("mouseup", () => { yellow.style.backgroundColor = "yellow"; }); 
+  blue.addEventListener("mouseup", () => { blue.style.backgroundColor = "blue"; }); 
+
+
 
 })();

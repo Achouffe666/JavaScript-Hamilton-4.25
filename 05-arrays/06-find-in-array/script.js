@@ -89,6 +89,15 @@
         },
     ];
 
+    let button = document.addEventListener('click', () => {
+
+   let person = people.find(search => search.firstname =="Jean" && search.lastname == "Dupont")
+
+        console.log("l'Email est " + person.email + " dont l'index est: " + people.indexOf(person));
+
+})
+  
+
     // your code here
 
 })();

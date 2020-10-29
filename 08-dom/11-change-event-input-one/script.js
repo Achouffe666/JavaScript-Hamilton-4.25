@@ -12,5 +12,17 @@
 (function() {
 
     // your code here
+    let input = document.getElementById('pass-one');
+    input.setAttribute('maxlength',10);
+
+
+    input.addEventListener('input',()=>{
+        
+    let count = input.value.length;
+
+    console.log(count);
+    document.querySelector('#counter').innerHTML = count + '/10';
+        
+    });
 
 })();

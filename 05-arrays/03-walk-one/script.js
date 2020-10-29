@@ -28,4 +28,14 @@
 
     // your code here
 
+    let button = document.getElementById('run');
+    let index = 0;
+
+    button.addEventListener('click', () =>{
+
+                            setInterval(function()  {
+                            console.log(fruits[index++]);},1000)
+    })
+
+
 })();

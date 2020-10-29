@@ -11,6 +11,18 @@
 
 (function() {
 
+    let target = document.getElementById('target');
+
+    let date = new Date();
+    let month = date.toLocaleString('en-us', { month: 'long' });
+    let weekday = date.toLocaleString('en-us' , {weekday: 'long'});
+    let day = date.getDate();
+    let year = date.getFullYear();
+    let hour = date.getHours();
+    let minutes = date.getMinutes();
+
+    target.innerHTML = "We're the " + weekday + " " + day + " " + month + " " + year + ", " + hour + "h" +minutes;
+
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
     // your code here

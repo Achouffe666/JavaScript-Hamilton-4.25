@@ -10,6 +10,15 @@
 // You will have time to focus on it later.
 
 (function() {
+const start = document.getElementById('run');
+let  randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+
+
+start.addEventListener('click', () => {document.body.style.backgroundColor = randomColor;});
+
+
+ 
+
 
     // your code here
 

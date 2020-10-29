@@ -40,5 +40,15 @@
     ];
 
     // your code here
+    let button = document.getElementById('run');
 
+    button.addEventListener('click', () =>{
+
+        people.forEach(name => {
+            console.log(name.firstname);
+        })
+    })
+  
+
+    
 })();
