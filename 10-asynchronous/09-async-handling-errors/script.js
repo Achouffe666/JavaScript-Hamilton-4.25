@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+
+    async function getPersons(myFunction) {
+        try {
+            let response = await myFunction;
+            return response;
+            
+        } catch (error) {
+            console.error('An error apreared, try again...')
+        }
+    }
+
+    document.querySelector('#run').addEventListener('click', ()=>{
+        getPersons(window.lib.getPersons()).then((persons)=>console.log(persons))
+    })
 })();

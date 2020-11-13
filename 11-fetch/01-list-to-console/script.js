@@ -10,5 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
+    async function heroes(myFunction){
+        try {
+            let response = await myFunction;
+            return response;
+            
+        } catch (error) {
+            console.error('Error, try again')
+        }
+    }
     // your code here
+    document.querySelector('#run').addEventListener('click', ()=>{
+        heroes(fetch('http://localhost:3000/heroes'))
+        .then((response) => {return response.json()})
+        .then((data)=>{console.log(data)})
+    })
 })();

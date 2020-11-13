@@ -11,4 +11,44 @@
 
 (() => {
     // your code here
+    async function hero(myFunction){
+        try {
+            let response = await myFunction;
+            return response;
+        } catch (error) {
+            console.error('Error');
+        }
+    }
+
+    document.querySelector('#run').addEventListener('click', ()=>{
+
+        let choosedHero = document.querySelector('#hero-id').value;
+
+
+        hero(fetch('http://localhost:3000/heroes'))
+        .then((response)=>{return response.json()})
+        .then((data)=>{
+
+           function myHeroId(ids) {
+               return ids.id == choosedHero;
+           }
+
+
+            let template = document.querySelector('#tpl-hero')
+            let target = document.querySelector('#target');
+            let clone = document.importNode(template.content,true);
+           
+            clone.querySelector('.name').innerHTML = data.find(myHeroId).name;
+            clone.querySelector('.alter-ego').innerHTML = data.find(myHeroId).alterEgo;
+            clone.querySelector('.powers').innerHTML = data.find(myHeroId).abilities.join(" - ");
+
+            target.appendChild(clone);
+            
+            
+            
+            
+        });
+
+    
+    })
 })();

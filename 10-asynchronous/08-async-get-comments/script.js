@@ -11,7 +11,33 @@
 
 (() => {
     // your code here
+
+    async function article(myFunction){
+        try {
+            let response = await myFunction;
+            return response;
+
+        } catch (error) {
+            console.error('error')
+        }
+    }
+    
+    async function getComments(anotherFunction){
+        try {
+            let answer = await anotherFunction;
+            return answer;
+            
+        } catch (error) {
+            console.error('AnotherError')
+        }
+    }
+
     document.querySelector('#run').addEventListener('click', ()=>{
-        alert('ok')
+        
+        article(window.lib.getPosts()).then((articles)=>(articles.forEach(element => {
+            getComments(window.lib.getComments(element.id)).then((comments)=>{console.log(comments)});
+            
+        })));
+        
     })
 })();
