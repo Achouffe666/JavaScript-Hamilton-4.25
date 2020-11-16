@@ -10,5 +10,44 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    let heroTab =[];
+
+    async function hero(myFunction){
+        try {
+            let response = await myFunction;
+            return response;
+            
+        } catch (error) {
+            console.error('An error aperead')
+        }
+    };
+
+        // fetching Hero's data from API
+        hero(fetch ('http://localhost:3000/heroes'))
+        .then((response)=>{return response.json()})
+        .then((data) =>{data.forEach(element => {
+            heroTab.push(element);
+            
+        });
+
+    document.querySelector('#run').addEventListener('click',() => {
+
+        // Declare-call all inputs
+        let heroName = document.querySelector('#hero-name').value;
+        let heroAlter = document.querySelector('#hero-alter-ego').value;
+        let heroPower = document.querySelector('#hero-powers').value;
+
+        //checks if inputs are empty
+        if(heroName.length == 0 || heroAlter.length == 0 || heroPower.length == 0)  
+        {alert('You must complete all fields')
+        ;} else{
+
+            heroTab.push({'id': (heroTab.length + 1),  'name' : heroName, 'alterEgo' : heroAlter , 'abilities' : heroPower.split(', ')})
+        
+            console.log(heroTab);
+        }
+        
+    })
+})
 })();
